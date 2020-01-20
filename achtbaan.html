@@ -1,0 +1,42 @@
+<html>
+	<head> 
+		<style>
+			body {
+				font-family: Georgia;
+				text-align: center;
+				background-color: darkolivegreen;
+				color: white;
+			}
+
+			#uitslagdiv {
+				font-size: 25px;
+			}
+
+		</style>
+
+		<script>
+		function maat(){	
+			var x = document.getElementById("lengte").value;
+			var uitslag = document.getElementById("uitslagdiv");
+			uitslag.innerHTML = "ff testen"
+
+			if(x < 121) {
+			uitslag.innerHTML = "Definitely not a good idea";
+			} else if (x > 120 && x < 140) {
+			uitslag.innerHTML = "Only with mommy or daddy!";	
+			} else {
+			uitslag.innerHTML = "Yes you can. Enjoy the ride!";
+			}
+}
+
+		</script>
+	</head>
+
+	<body>
+		<h1> Can I ride the Rollercoaster? </h1>
+		<input id=lengte>
+	<input value=cm type=button onclick=maat()>
+	<div id=uitslagdiv>Can I please?? </div>
+	</body>
+
+</html>

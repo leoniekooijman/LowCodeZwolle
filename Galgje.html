@@ -1,24 +1,42 @@
+<html>
+<head>
 <script>
 var aantalpogingen = 10;
 function raden(){
-  var x = document.getElementById("geradenletter").value;
-  if(x == "f" || x == "i" || x == "e" || x == "t" || x == "s"){
-	alert("lekker bezig");
-  } else {
+	var deDOM = document.getElementsByTagName("html");
+	console.log(deDOM);
+	var x = document.getElementById("geradenletter").value;
+	var uitkomst = document.getElementById("uitkomstdiv");
+ 	
+	var plaatje = document.getElementById("hetplaatje");
+	plaatje.onclick = function () {
+	alert();
+	}
+
+	if(x == "f" || x == "i" || x == "e" || x == "t" || x == "s"){
+	uitkomst.innerHTML = "lekker bezig";
+	uitkomst.style.backgroundColor = "lightgreen";
+	} else {
 	aantalpogingen--;
-	alert("fout");
-  }
+	uitkomst.innerHTML = "fout";
+	uitkomst.style.backgroundColor = "red";
+	}
 	console.log(aantalpogingen);
 	if (aantalpogingen == 0){
 	alert("Je bent dood, try again");
 	aantalpogingen = 10;
-  }
+	}
 }
 </script>
+</head>
 
-<h1>Galgje</h1>
-<img src="galgje.jpg"/>
-<br>
-<div>.....</div>
-<input id=geradenletter>
-<input value=Raden type=button onclick=raden()>
+<body>
+	<h1>Galgje</h1>
+	<img src="galgje.jpg"/>
+	<br>
+	<div>.....</div>
+	<input id=geradenletter>
+	<input value=Raden type=button onclick=raden()>
+	<div id=uitkomstdiv>uitkomst</div> 
+</body>
+</html>
