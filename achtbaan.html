@@ -18,14 +18,16 @@
 		function maat(){	
 			var x = document.getElementById("lengte").value;
 			var uitslag = document.getElementById("uitslagdiv");
-			uitslag.innerHTML = "ff testen"
 
 			if(x < 121) {
 			uitslag.innerHTML = "Definitely not a good idea";
+			document.getElementById("afbeelding").src="betternot.jpg";
 			} else if (x > 120 && x < 140) {
-			uitslag.innerHTML = "Only with mommy or daddy!";	
+			uitslag.innerHTML = "Only with mommy or daddy!";
+			document.getElementById("afbeelding").src="onlytogether.jpg";	
 			} else {
 			uitslag.innerHTML = "Yes you can. Enjoy the ride!";
+			document.getElementById("afbeelding").src="yay.jpg";
 			}
 }
 
@@ -33,9 +35,10 @@
 	</head>
 
 	<body>
+		<img src="yay.jpg" id="afbeelding">
 		<h1> Can I ride the Rollercoaster? </h1>
 		<input id=lengte>
-	<input value=cm type=button onclick=maat()>
+	<input value=cm type=button onclick="maat()">
 	<div id=uitslagdiv>Can I please?? </div>
 	</body>
 
