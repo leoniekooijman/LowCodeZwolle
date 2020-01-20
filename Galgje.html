@@ -1,12 +1,17 @@
 <script>
-  function raden(){
+var aantalpogingen = 10;
+function raden(){
   var x = document.getElementById("geradenletter").value;
   if(x == "f" || x == "i" || x == "e" || x == "t" || x == "s"){
-	alert("goed");
+	alert("lekker bezig");
   } else {
+	aantalpogingen--;
 	alert("fout");
   }
-
+	console.log(aantalpogingen);
+	if (aantalpogingen == 0){
+	alert("Je bent dood");
+  }
 }
 </script>
 
@@ -15,4 +20,4 @@
 <br>
 <div>.....</div>
 <input id=geradenletter>
-<input value=raden type=button onclick=raden()>
+<input value=Raden type=button onclick=raden()>
