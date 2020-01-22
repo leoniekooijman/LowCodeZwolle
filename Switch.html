@@ -1,0 +1,42 @@
+<html>
+   <head>
+       <script>
+           function raden(){
+               var x = 3;
+               switch(x){
+                   case 2:
+                       alert("het is twee");
+                       break;
+                   case 3:
+                       alert("het is drie");
+                       break;
+                   default:
+                       alert("dit getal is onbekend");
+               }
+               raden2("maandag");
+               raden2("donderdag");
+           }
+           function raden2(weekdag){
+             
+               switch(weekdag){
+                   case "maandag":
+                       alert("we moeten nog een flink stuk");
+                       break;
+                   case "woensdag":
+                       alert("halverwege");
+                       break;
+                   default:
+                       alert("misschien wel weekend");
+               }
+           }
+       </script>
+       <style>
+      
+       </style>
+   </head>
+   <body>
+       <input value=optellen type=button onclick=raden() >
+       <input value=ophalen type=button onclick=toonStorage() >
+       <div id=output></div>
+   </body>
+</html>
